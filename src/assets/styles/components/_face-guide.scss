@@ -1,0 +1,56 @@
+.face-guide {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 100%;
+	padding: 7.5rem 0 3.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: url('../../images/bg.jpg') no-repeat center;
+	background-size: cover;
+
+	&__head {
+		.heading {
+			margin-bottom: 0;
+		}
+	}
+
+	&__body {
+		display: flex;
+		justify-content: center;
+	}
+
+	&-foot {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.face-note {
+	padding: 0;
+	margin: 0 0 2.5rem;
+	list-style: none;
+	display: flex;
+	width: 100%;
+
+	&-item {
+		width: 33.3333%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			width: 3.8rem;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			span {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+@import './mixins';
+@import './fonts';
+@import './variables';
+@import './reset';
+@import './global';
+@import './keyframes';
+
+@import './plugins/slick';
+
+@import './elements/button';
+@import './elements/input';
+@import './elements/checkbox';
+@import './elements/select';
+
+@import './components/effect';
+@import './components/device';
+@import './components/form';
+@import './components/loader';
+@import './components/header';
+@import './components/navbar';
+@import './components/navigation';
+@import './components/warning';
+@import './components/cookie-popup';
+@import './components/age-gate';
+@import './components/swipe-agree';
+@import './components/intro';
+@import './components/heading';
+@import './components/face-guide';
+@import './components/face-detection';
+@import './components/login';
+@import './components/home-earn-point';
+
+@import './pages/not-found';
+@import './pages/welcome';
+@import './pages/auth';

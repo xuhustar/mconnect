@@ -1,0 +1,101 @@
+.btn {
+	height: 4.7rem;
+	background-size: cover;
+	font-size: 1.5rem;
+	font-weight: 700;
+	font-style: italic;
+	line-height: 1.2;
+	text-transform: uppercase;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	outline: 0;
+	border: 0;
+	color: #FFD12D;
+	text-decoration: none;
+	background-color: transparent;
+	position: relative;
+	margin: 0 1.8rem;
+
+	&:focus {
+		outline: 0;
+	}
+
+	&--animate {
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -35px 0 0 -35px;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			opacity: 0;
+			background: rgba(#FFBB00, 0.2);
+			animation: zoom-out 0.3s
+		}
+	}
+
+	&--disabled {
+		opacity: 0.5;
+		pointer-events: none;
+		cursor: default;
+	}
+
+	&--link {
+		width: auto;
+		height: auto;
+		padding: 0;
+		background: none;
+		text-transform: none;
+		font-style: normal;
+		font-weight: 400;
+		text-decoration: underline;
+		margin: 0;
+
+		.btn {
+			&__text {
+				background: none;
+				padding: 0;
+
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__text {
+		padding: 1rem 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		background: url('../../images/form/bg-btn-center.png') repeat-x center;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 1.8rem;
+			height: 4.7rem;
+			background-repeat: no-repeat;
+			background-position: left top;
+			top: 0;
+		}
+
+		&::before {
+			background-image: url('../../images/form/bg-btn-left.png');
+			left: -1.8rem;
+		}
+
+		&::after {
+			right: -1.8rem;
+			background-image: url('../../images/form/bg-btn-right.png');
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background: rgba(215, 24, 42, 0.9);
+  z-index: 99999999;
+
+  &-icon {
+    position: relative;
+    width: 45px;
+    height: 2px;
+    background: white;
+    animation: spin;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: -7px;
+      right: -16px;
+      width: 12px;
+      height: 12px;
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+
+    &::after {
+      top: -5px;
+      right: unset;
+      left: -10px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

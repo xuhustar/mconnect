@@ -1,0 +1,5 @@
+export * from './CookieSettingPage'
+export * from './FaqsPage'
+export * from './HotlinePage'
+export * from './MaintenancePage'
+export * from './NotFoundPage'

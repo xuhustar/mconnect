@@ -1,0 +1,7 @@
+export * from './FaceDetection'
+export * from './FaceGuide'
+export * from './OTPAgreePhone'
+export * from './OTPForm'
+export * from './ReferalCode'
+export * from './RegisterForm'
+export * from './LoginForm'

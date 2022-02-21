@@ -1,0 +1,116 @@
+.navigation {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	width: 100%;
+	height: 60px;
+	z-index: 9;
+
+	.menu {
+		display: flex;
+		align-items: flex-end;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: absolute;
+		left: 0;
+		bottom: 8px;
+		width: 100%;
+
+		&-item {
+			position: relative;
+			width: 20%;
+
+			&:nth-child(3) {
+				width: 20%;
+
+				.icon {
+					width: 100%;
+					height: 100%;
+				}
+
+				.menu {
+					&-icon {
+						width: 6rem;
+						height: 6rem;
+						padding: 1.2rem;
+						background-color: #CE0D0B;
+						border-radius: 2rem;
+						border: 4px solid #fff;
+					}
+				}
+			}
+
+			.icon {
+				width: 2rem;
+				height: 2rem;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				display: block;
+
+				&-home {
+					background-image: url('../../images/icons/home.svg');
+				}
+
+				&-promotion {
+					background-image: url('../../images/icons/promotion.svg');
+				}
+
+				&-scan-code {
+					background-image: url('../../images/icons/scan-code.svg');
+				}
+
+				&-earn-point {
+					background-image: url('../../images/icons/earn-point.svg');
+				}
+
+				&-user {
+					background-image: url('../../images/icons/user.svg');
+				}
+			}
+
+			a {
+				color: #000;
+				font-size: 1.2rem;
+				line-height: 1.1;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-decoration: none;
+
+				&.is-active {
+					color: #CE0D0B;
+
+					.icon {
+						&-home {
+							background-image: url('../../images/icons/home-active.svg');
+						}
+
+						&-promotion {
+							background-image: url('../../images/icons/promotion-active.svg');
+						}
+
+						&-scan-code {
+							background-image: url('../../images/icons/scan-code.svg');
+						}
+
+						&-earn-point {
+							background-image: url('../../images/icons/earn-point-active.svg');
+						}
+
+						&-user {
+							background-image: url('../../images/icons/user-active.svg');
+						}
+					}
+				}
+			}
+		}
+
+		&-icon {
+			display: block;
+			margin-bottom: 5px;
+		}
+	}
+}

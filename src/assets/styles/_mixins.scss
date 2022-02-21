@@ -1,0 +1,54 @@
+@mixin hover {
+	.is-desktop &:hover {
+		@content;
+	}
+}
+
+@mixin minW($screen) {
+	@media (min-width: #{$screen}px) {
+		@content;
+	}
+}
+
+@mixin minH($screen) {
+	@media (min-height: #{$screen}px) {
+		@content;
+	}
+}
+
+@mixin maxW($screen) {
+	@media (max-width: #{$screen}px) {
+		@content;
+	}
+}
+
+@mixin maxH($screen) {
+	@media (max-height: #{$screen}px) {
+		@content;
+	}
+}
+
+@mixin landscape() {
+	@media (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin fontSize($size) {
+	font-size: #{($size / 16)}rem;
+}
+
+@mixin fontFace($font-name, $path, $name, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: quote($font-name);
+		src: url($path + $name + '.eot');
+		src: url($path + $name + '.eot?#iefix') format('embedded-opentype'),
+				 url($path + $name + '.woff2') format('woff2'),
+				 url($path + $name + '.woff') format('woff'),
+				 url($path + $name + '.ttf') format('truetype'),
+				 url($path + $name + '.svg##{$name}') format('svg');
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}

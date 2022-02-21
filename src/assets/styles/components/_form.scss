@@ -1,0 +1,20 @@
+.form {
+	&__group {
+		display: flex;
+
+		.field {
+			&::before {
+				display: none;
+			}
+
+			&__input {
+				padding: 0;
+				text-align: center;
+			}
+
+			&__error {
+				display: none;
+			}
+		}
+	}
+}

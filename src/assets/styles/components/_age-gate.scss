@@ -1,0 +1,28 @@
+.age-gate {
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+
+	&__body {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+		padding: 7.5rem 0 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+		z-index: 2;
+	}
+
+	.img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+	}
+}

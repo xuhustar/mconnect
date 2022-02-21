@@ -1,0 +1,140 @@
+.select {
+	position: relative;
+	margin-bottom: 1.5rem;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+	}
+
+	&::before {
+		width: 1.2rem;
+		height: 1.2rem;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		left: 1.2rem;
+		top: 1.4rem;
+	}
+
+	&::after {
+		width: 1.2rem;
+		height: 1.2rem;
+		border-bottom: 2px solid rgba(#fff, 0.5);
+		border-left: 2px solid rgba(#fff, 0.5);
+		right: 2rem;
+		top: 1.2rem;
+		transform: rotate(-45deg);
+	}
+
+	&--valid {
+		&::before {
+			display: block;
+			background-image: url('../../images/icons/success.svg');
+		}
+
+		&::after {
+			border-bottom: 2px solid #fff;
+			border-left: 2px solid #fff;
+		}
+
+		.select {
+			&__label {
+				color: #fff;
+			}
+		}
+	}
+
+	&--invalid {
+		&::before {
+			display: block;
+			background-image: url('../../images/icons/warning.svg');
+		}
+
+		.field {
+			&__control {
+				&::before {
+					background-image: url('../../images/form/bg-input-left-error.png');
+				}
+
+				&::after {
+					background-image: url('../../images/form/bg-input-right-error.png');
+				}
+			}
+
+			&__input {
+				background-image: url('../../images/form/bg-input-center-error.png');
+			}
+		}
+	}
+
+	&__control {
+		position: relative;
+		width: 100%;
+		height: 4rem;
+		padding: 0 1.2rem;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 1.2rem;
+			height: 4rem;
+			background-repeat: no-repeat;
+			background-position: left top;
+			top: 0;
+		}
+
+		&::before {
+			background-image: url('../../images/form/bg-input-left.png');
+			left: 0;
+		}
+
+		&::after {
+			right: 0;
+			background-image: url('../../images/form/bg-input-right.png');
+		}
+	}
+
+	&__label {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		border: 0;
+		outline: 0;
+		padding: 0.6rem 2.6rem 0.6rem 1.6rem;
+		background-image: url('../../images/form/bg-input-center.png');
+		background-repeat: repeat-x;
+		background-position: center;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		color: rgba(#fff, 0.5);
+	}
+
+	&__choose {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+
+		&:focus {
+			outline: 0;
+		}
+	}
+
+	&__error {
+		font-size: 1.4rem;
+		line-height: 1.2;
+		color: #FFD12D;
+		padding-left: 1rem;
+		font-style: italic;
+		min-height: 1.7rem;
+		display: block;
+		margin-top: 5px;
+	}
+}

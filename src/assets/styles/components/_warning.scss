@@ -1,0 +1,27 @@
+.warning {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	padding: 1.8rem 3.2rem;
+	z-index: 99;
+
+	&__title {
+		color: #000;
+		margin-bottom: 0;
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.35;
+		text-transform: uppercase;
+		text-align: center;
+
+		span {
+			display: block;
+		}
+	}
+
+	~.cookie-popup {
+		bottom: 7.9rem;
+	}
+}
